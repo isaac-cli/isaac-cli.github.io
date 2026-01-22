@@ -43,10 +43,9 @@
     header img {
       max-width: 200px;
       margin-bottom: 20px;
-      background: white;
-      padding: 12px;
-      border-radius: 16px;
+      filter: drop-shadow(0 8px 15px rgba(0,0,0,0.25));
     }
+    
 
     .navbar {
       background-color: var(--verde);
@@ -465,3 +464,4 @@
  <script> const searchInput = document.querySelector('header input'); searchInput.addEventListener('keyup', function() { let filter = searchInput.value.toLowerCase(); let cards = document.querySelectorAll('#productos .card'); cards.forEach(card => { let text = card.innerText.toLowerCase(); if (text.includes(filter)) { card.style.display = "block"; } else { card.style.display = "none"; } }); }); </script>
 </body>
 </html>
+
