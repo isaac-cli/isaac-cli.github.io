@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Emperatriz Frutos Secos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --verde: #2e7d32;
+      --verde-claro: #66bb6a;
+      --marron: #5d4037;
+      --fondo: #f9f7f3;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--fondo);
+      padding-top: 70px; /* espacio para navbar fija */
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--verde);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--verde), var(--verde-claro));
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 200px;
+      margin-bottom: 20px;
+      background: white;
+      padding: 12px;
+      border-radius: 16px;
+    }
+
+    .navbar {
+      background-color: var(--verde);
+    }
+
+    .navbar a {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .navbar-toggler {
+      border-color: white;
+    }
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    .card {
+      border: none;
+      border-radius: 18px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    }
+
+    .btn-pedido {
+      background-color: #25D366;
+      color: white;
+      font-size: 1.1rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: var(--marron);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* Alinear todas las cards en la misma altura */
+    .row.g-4 > div { display: flex; }
+    .card { flex: 1; }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header data-aos="fade-down">
+  <img src="logo.png" alt="Emperatriz Frutos Secos">
+  <h1>Emperatriz Frutos Secos</h1>
+  <p>Calidad natural para tu mesa</p>
+
+  <!-- Barra de búsqueda -->
+  <div class="input-group mt-3 w-50 mx-auto">
+    <input type="text" class="form-control" placeholder="Buscar productos...">
+    <button class="btn btn-success">
+      🔍
+    </button>
+  </div>
+
+  <a href="https://wa.me/56934219681?text=Hola%20quiero%20hacer%20un%20pedido%20en%20Emperatriz%20Frutos%20Secos"
+     class="btn-pedido mt-4 d-inline-block">
+    🛒 Hacer pedido por WhatsApp
+  </a>
+</header>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand text-white fw-bold" href="#">Emperatriz</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sucursales">Sucursales</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PRODUCTOS -->
+<section id="productos" class="container py-5">
+  <h2 class="text-center mb-5" data-aos="fade-right">🛍️ ¿Qué ofrecemos?</h2>
+
+  <div class="row g-4">
+    <!-- Frutos Secos -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalFrutosSecos">
+        <h3>🌰 Frutos Secos</h3>
+        <p>Gran variedad a granel.</p>
+      </div>
+    </div>
+
+    <!-- Tés e Infusiones -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalTes">
+        <h3>🍵 Tés e Infusiones</h3>
+        <p>Akbar, Basilur, Twinings, Landy.</p>
+      </div>
+    </div>
+
+    <!-- Cafés -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalCafe">
+        <h3>☕ Cafés</h3>
+        <p>En grano y molido.</p>
+      </div>
+    </div>
+
+    <!-- Aceites y Vinagres -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalAceites">
+        <h3>🧴 Aceites y Vinagres</h3>
+        <p>Opciones gourmet.</p>
+      </div>
+    </div>
+
+    <!-- Harinas -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalHarinas">
+        <h3>🌾 Harinas</h3>
+        <p>Con y sin gluten.</p>
+      </div>
+    </div>
+
+    <!-- Condimentos -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalCondimentos">
+        <h3>🧂 Condimentos</h3>
+        <p>Sales y especias.</p>
+      </div>
+    </div>
+
+    <!-- Semillas -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalSemillas">
+        <h3>🌱 Semillas</h3>
+        <p>Chía, linaza, zapallo.</p>
+      </div>
+    </div>
+
+    <!-- Legumbres -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalLegumbres">
+        <h3>🫘 Legumbres</h3>
+        <p>Porotos, lentejas, arroz.</p>
+      </div>
+    </div>
+
+    <!-- Yerba Mate -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalYerbaMate">
+        <h3>🍃 Yerba Mate</h3>
+        <p>Tradición y energía natural.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCURSALES -->
+<section id="sucursales" class="container py-5 text-center" data-aos="fade-up">
+  <h2>📍 Sucursales</h2>
+  <p>
+    Puerto Montt – Guillermo Gallardo 119<br>
+    Puerto Montt – Granel, Egaña 31<br>
+    Puerto Varas – Walker Martínez 525
+  </p>
+</section>
+
+<!-- MAPA -->
+<section class="container py-5">
+  <h2 class="text-center mb-4">🗺️ Encuéntranos</h2>
+  <div class="ratio ratio-16x9">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989.4842330389624!2d-72.94436312460982!3d-41.47210057128923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96183b5fd75fa74f%3A0xc59e441a6f8e1e67!2sFrutos%20Secos%20Emperatriz.!5e0!3m2!1ses!2scl!4v1768953194150!5m2!1ses!2scl"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="container py-5">
+  <h2 class="text-center mb-4">📬 Contáctanos</h2>
+  <form class="row g-3">
+    <div class="col-md-6">
+      <input type="text" class="form-control" placeholder="Nombre" required>
+    </div>
+    <div class="col-md-6">
+      <input type="email" class="form-control" placeholder="Correo electrónico" required>
+    </div>
+    <div class="col-12">
+      <textarea class="form-control" rows="4" placeholder="Mensaje"></textarea>
+    </div>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-success px-4">Enviar</button>
+    </div>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Emperatriz Frutos Secos</p>
+  <div>
+    <a href="https://wa.me/56934219681">WhatsApp</a>
+    <a href="mailto:contacto@emperatriz.cl">Email</a>
+  </div>
+</footer>
+
+<!-- MODALES -->
+<!-- Frutos Secos -->
+<div class="modal fade" id="modalFrutosSecos" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🌰 Frutos Secos</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">Almendras</li>
+          <li class="list-group-item">Nueces</li>
+          <li class="list-group-item">Avellanas</li>
+          <li class="list-group-item">Maní</li>
+          <li class="list-group-item">Castañas de cajú</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tés e Infusiones -->
+<div class="modal fade" id="modalTes" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🍵 Tés e Infusiones</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">Akbar</li>
+          <li class="list-group-item">Basilur</li>
+          <li class="list-group-item">Twinings</li>
+          <li class="list-group-item">Landy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cafés -->
+<div class="modal fade" id="modalCafe" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">☕ Cafés</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">Café en grano</li>
+          <li class="list-group-item">Café molido</li>
+          <li class="list-group-item">Café descafeinado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Aceites y Vinagres -->
+<div class="modal fade" id="modalAceites" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🧴 Aceites y Vinagres</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">Aceite de oliva</li>
+          <li class="list-group-item">Aceite de coco</li>
+          <li class="list-group-item">Vinagre balsámico</li>
+          <li class="list-group-item">Vinagre de manzana</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Harinas -->
+<div class="modal fade" id="modalHarinas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🌾 Harinas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">Harina de trigo</li>
+          <li class="list-group-item">Harina integral</li>
+          <li class="list-group-item">Harina de avena</li>
+          <li class="list-group-item">Harina sin gluten</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Condimentos -->
+<div class="modal fade" id="modalCondimentos" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🧂 Condimentos</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">Sal de mar</li>
+          <li class="list-group-item">Pimienta negra</li>
+          <li class="list-group-item">Orégano</li>
+          <li class="list-group-item">Comino</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Semillas -->
+<div class="modal fade" id="modalSemillas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🌱 Semillas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">Chía</li>
+          <li class="list-group-item">Linaza</li>
+          <li class="list-group-item">Zapallo</li>
+          <li class="list-group-item">Girasol</li>
+          <li class="list-group-item">Sésamo</li>
+          <li class="list-group-item">Amapola</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Legumbres -->
+<div class="modal fade" id="modalLegumbres" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🫘 Legumbres</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">Porotos</li>
+          <li class="list-group-item">Lentejas</li>
+          <li class="list-group-item">Garbanzos</li>
+          <li class="list-group-item">Arvejas partidas</li>
+          <li class="list-group-item">Quinoa</li>
+          <li class="list-group-item">Arroz integral</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Yerba Mate -->
+<div class="modal fade" id="modalYerbaMate" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🍃 Yerba Mate</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">Yerba Mate Taragüi</li>
+          <li class="list-group-item">Yerba Mate cbsè</li>
+          <li class="list-group-item">Yerba Mate Cruz de Malta</li>
+          <li class="list-group-item">Yerba Mate Playadito</li>
+          <li class="list-group-item">Yerba Mate Rosamonte</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true });
+</script>
+
+<!-- Tu script de búsqueda --> 
+ <script> const searchInput = document.querySelector('header input'); searchInput.addEventListener('keyup', function() { let filter = searchInput.value.toLowerCase(); let cards = document.querySelectorAll('#productos .card'); cards.forEach(card => { let text = card.innerText.toLowerCase(); if (text.includes(filter)) { card.style.display = "block"; } else { card.style.display = "none"; } }); }); </script>
+</body>
+</html>
