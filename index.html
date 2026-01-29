@@ -13,111 +13,28 @@
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <style>
-    :root {
-      --verde: #2e7d32;
-      --verde-claro: #66bb6a;
-      --marron: #5d4037;
-      --fondo: #f9f7f3;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: var(--fondo);
-      padding-top: 70px; /* espacio para navbar fija */
-    }
-
-    h1, h2, h3 {
-      font-family: 'Poppins', sans-serif;
-      color: var(--verde);
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--verde), var(--verde-claro));
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
+  <link rel="stylesheet" href="css/estilos.css">
 
 
-    header img {
-      max-width: 200px;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 8px 15px rgba(0,0,0,0.25));
-    }
 
-
-    .navbar {
-      background-color: var(--verde);
-    }
-
-    .navbar a {
-      color: white !important;
-      font-weight: 500;
-    }
-
-    .navbar-toggler {
-      border-color: white;
-    }
-    .navbar-toggler-icon {
-      filter: invert(1);
-    }
-
-    .card {
-      border: none;
-      border-radius: 18px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-    }
-
-    .btn-pedido {
-      background-color: #25D366;
-      color: white;
-      font-size: 1.1rem;
-      padding: 14px 28px;
-      border-radius: 50px;
-      text-decoration: none;
-    }
-
-    footer {
-      background-color: var(--marron);
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    /* Alinear todas las cards en la misma altura */
-    .row.g-4 > div { display: flex; }
-    .card { flex: 1; }
-  </style>
-</head>
 
 <body>
 
 <!-- HEADER -->
 <header data-aos="fade-down">
-  <img src="logo.png" alt="Emperatriz Frutos Secos">
+  <img src="img/logo.png" alt="Emperatriz Frutos Secos">
   <h1>Emperatriz Frutos Secos</h1>
   <p>Calidad natural para tu mesa</p>
 
-  <!-- Barra de búsqueda -->
-  <div class="input-group mt-3 w-50 mx-auto">
-    <input type="text" class="form-control" placeholder="Buscar productos...">
-    <button class="btn btn-success">
-      🔍
-    </button>
-  </div>
+<div class="buscador-container mx-auto mt-3">
+  <input
+    type="text"
+    id="buscador"
+    class="form-control"
+    placeholder="Buscar producto...">
+</div>
+
+
 
   <a href="https://wa.me/56934219681?text=Hola%20quiero%20hacer%20un%20pedido%20en%20Emperatriz%20Frutos%20Secos"
      class="btn-pedido mt-4 d-inline-block">
@@ -151,7 +68,7 @@
     <div class="col-md-4" data-aos="flip-left">
       <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalFrutosSecos">
         <h3>🌰 Frutos Secos</h3>
-        <p>Gran variedad a granel.</p>
+        <p>Gran variedad para lo que necesites.</p>
       </div>
     </div>
 
@@ -234,11 +151,73 @@
 <!-- MAPA -->
 <section class="container py-5">
   <h2 class="text-center mb-4">🗺️ Encuéntranos</h2>
-  <div class="ratio ratio-16x9">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989.4842330389624!2d-72.94436312460982!3d-41.47210057128923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96183b5fd75fa74f%3A0xc59e441a6f8e1e67!2sFrutos%20Secos%20Emperatriz.!5e0!3m2!1ses!2scl!4v1768953194150!5m2!1ses!2scl"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<div class="accordion" id="accordionUbicaciones">
+
+  <!-- Puerto Montt -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mapa-montt">
+        📍 Puerto Montt
+      </button>
+    </h2>
+    <div id="mapa-montt" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <iframe
+          src="https://www.google.com/maps?q=Puerto+Montt&output=embed"
+          width="100%"
+          height="250"
+          style="border:0;"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
   </div>
-</section>
+
+  <!-- Puerto Egaña -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mapa-egana">
+        📍 Puerto Egaña
+      </button>
+    </h2>
+    <div id="mapa-egana" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <iframe
+          src="https://www.google.com/maps?q=Puerto+Egaña&output=embed"
+          class="mapa-iframe">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Puerto Varas -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mapa-varas">
+        📍 Puerto Varas
+      </button>
+    </h2>
+    <div id="mapa-varas" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <iframe
+          src="https://www.google.com/maps?q=Puerto+Varas&output=embed"
+          class="mapa-iframe">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 <!-- CONTACTO -->
 <section id="contacto" class="container py-5">
@@ -270,7 +249,7 @@
 
 <!-- MODALES -->
 <!-- Frutos Secos -->
-<div class="modal fade" id="modalFrutosSecos" tabindex="-1" aria-hidden="true">
+<div class="modal" id="modalFrutosSecos" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-success text-white">
@@ -278,12 +257,113 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <ul class="list-group">
-          <li class="list-group-item">Almendras</li>
-          <li class="list-group-item">Nueces</li>
-          <li class="list-group-item">Avellanas</li>
-          <li class="list-group-item">Maní</li>
-          <li class="list-group-item">Castañas de cajú</li>
+
+  <div class="accordion" id="accordionFrutosSecos">
+
+    <!-- NUECES -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button"
+          data-bs-toggle="collapse" data-bs-target="#fs-nueces">
+          Nueces
+        </button>
+      </h2>
+      <div id="fs-nueces" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Mariposa blanca</li>
+            <li>Mariposa ámbar</li>
+            <li>Mariposa oscura</li>
+            <li>Picada cuartillo blanca</li>
+            <li>Picada cuartillo ámbar</li>
+            <li>Picada oscura</li>
+            <li>Cuartos blancos</li>
+            <li>Cuartos ámbar</li>
+            <li>En cáscara</li>
+            <li>Pecana sin cáscara</li>
+            <li>Nuez de Brasil</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALMENDRAS -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button"
+          data-bs-toggle="collapse" data-bs-target="#fs-almendras">
+          Almendras
+        </button>
+      </h2>
+      <div id="fs-almendras" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Exportación</li>
+            <li>Partidas / trituradas</li>
+            <li>Laminadas</li>
+            <li>Entera / con daño</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MANÍ -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button"
+          data-bs-toggle="collapse" data-bs-target="#fs-mani">
+          mani
+        </button>
+      </h2>
+      <div id="fs-mani" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Tostado con o sin sal</li>
+            <li>Cutícula roja tostado</li>
+            <li>Con cáscara premium</li>
+            <li>Confitado (natural, rojo, mix, capuchino, sésamo)</li>
+            <li>Saborizado (frambuesa, menta, mora, mix)</li>
+            <li>Chocolate cacao bitter premium</li>
+            <li>Chocolate leche premium</li>
+            <li>Chocolate golosina</li>
+            <li>Merkén picante</li>
+            <li>Orégano / finas hierbas</li>
+            <li>Japonés (clásico, picante, ciboulette, napolitano)</li>
+            <li>Japonés mix 4 sabores</li>
+            <li>Japonés sésamo</li>
+            <li>Crocomaní / rocklets</li>
+            <li>En terrones</li>
+            <li>Garrapiñado</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTROS -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button"
+          data-bs-toggle="collapse" data-bs-target="#fs-otros">
+          Otros frutos secos
+        </button>
+      </h2>
+      <div id="fs-otros" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Avellanas europeas</li>
+            <li>Castaña de cajú (salada o natural)</li>
+            <li>Pistacho (salado o natural)</li>
+            <li>Pistacho sin cáscara</li>
+            <li>Nuez macadamia</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
         </ul>
       </div>
     </div>
@@ -291,7 +371,7 @@
 </div>
 
 <!-- Tés e Infusiones -->
-<div class="modal fade" id="modalTes" tabindex="-1" aria-hidden="true">
+<div class="modal " id="modalTes" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-success text-white">
@@ -311,7 +391,7 @@
 </div>
 
 <!-- Cafés -->
-<div class="modal fade" id="modalCafe" tabindex="-1" aria-hidden="true">
+<div class="modal" id="modalCafe" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-success text-white">
@@ -330,7 +410,7 @@
 </div>
 
 <!-- Aceites y Vinagres -->
-<div class="modal fade" id="modalAceites" tabindex="-1" aria-hidden="true">
+<div class="modal" id="modalAceites" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-success text-white">
@@ -350,19 +430,60 @@
 </div>
 
 <!-- Harinas -->
-<div class="modal fade" id="modalHarinas" tabindex="-1" aria-hidden="true">
+<div class="modal" id="modalHarinas" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-success text-white">
         <h5 class="modal-title">🌾 Harinas</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
-      <div class="modal-body">
-        <ul class="list-group">
-          <li class="list-group-item">Harina de trigo</li>
-          <li class="list-group-item">Harina integral</li>
-          <li class="list-group-item">Harina de avena</li>
-          <li class="list-group-item">Harina sin gluten</li>
+<div class="modal-body">
+  <div class="accordion" id="accordionHarinas">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#hc-harinas">
+          Harinas
+        </button>
+      </h2>
+      <div id="hc-harinas" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Avena</li>
+            <li>Almendra</li>
+            <li>Arroz</li>
+            <li>Coco</li>
+            <li>Garbanzo</li>
+            <li>Quinoa</li>
+            <li>Maíz</li>
+            <li>Sin gluten</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#hc-cereales">
+          Cereales
+        </button>
+      </h2>
+      <div id="hc-cereales" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Avena integral</li>
+            <li>Granola</li>
+            <li>Muesli</li>
+            <li>Cornflake</li>
+            <li>Salvado</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
         </ul>
       </div>
     </div>
@@ -370,7 +491,7 @@
 </div>
 
 <!-- Condimentos -->
-<div class="modal fade" id="modalCondimentos" tabindex="-1" aria-hidden="true">
+<div class="modal" id="modalCondimentos" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-success text-white">
@@ -378,11 +499,86 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <ul class="list-group">
-          <li class="list-group-item">Sal de mar</li>
-          <li class="list-group-item">Pimienta negra</li>
-          <li class="list-group-item">Orégano</li>
-          <li class="list-group-item">Comino</li>
+  <div class="accordion" id="accordionCondimentos">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#cd-sal">
+          Sal
+        </button>
+      </h2>
+      <div id="cd-sal" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Sal fina</li>
+            <li>Sal gruesa</li>
+            <li>Sal rosada</li>
+            <li>Sal parrillera</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#cd-pimienta">
+          Pimienta
+        </button>
+      </h2>
+      <div id="cd-pimienta" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Negra grano</li>
+            <li>Negra molida</li>
+            <li>Blanca</li>
+            <li>Mix pimientas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#cd-especias">
+          Especias
+        </button>
+      </h2>
+      <div id="cd-especias" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Orégano</li>
+            <li>Comino</li>
+            <li>Paprika</li>
+            <li>Curry</li>
+            <li>Merkén</li>
+            <li>Ajo en polvo</li>
+            <li>Cebolla en polvo</li>
+            <li>Nuez moscada</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#cd-mix">
+          Mix y condimentos preparados
+        </button>
+      </h2>
+      <div id="cd-mix" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Finas hierbas</li>
+            <li>Aliño completo</li>
+            <li>Mix parrillero</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
         </ul>
       </div>
     </div>
@@ -390,21 +586,43 @@
 </div>
 
 <!-- Semillas -->
-<div class="modal fade" id="modalSemillas" tabindex="-1" aria-hidden="true">
+<div class="modal" id="modalSemillas" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-success text-white">
         <h5 class="modal-title">🌱 Semillas</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
-      <div class="modal-body">
-        <ul class="list-group">
-          <li class="list-group-item">Chía</li>
-          <li class="list-group-item">Linaza</li>
-          <li class="list-group-item">Zapallo</li>
-          <li class="list-group-item">Girasol</li>
-          <li class="list-group-item">Sésamo</li>
-          <li class="list-group-item">Amapola</li>
+<div class="modal-body">
+  <div class="accordion" id="accordionSemillas">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sm-semillas">
+          Semillas
+        </button>
+      </h2>
+      <div id="sm-semillas" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Chía negra</li>
+            <li>Chía blanca</li>
+            <li>Linaza</li>
+            <li>Girasol</li>
+            <li>Zapallo</li>
+            <li>Sésamo blanco</li>
+            <li>Sésamo negro</li>
+            <li>Sésamo tostado</li>
+            <li>Amapola</li>
+            <li>Mix semillas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
         </ul>
       </div>
     </div>
@@ -412,21 +630,87 @@
 </div>
 
 <!-- Legumbres -->
-<div class="modal fade" id="modalLegumbres" tabindex="-1" aria-hidden="true">
+<div class="modal" id="modalLegumbres" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-success text-white">
         <h5 class="modal-title">🫘 Legumbres</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
-      <div class="modal-body">
-        <ul class="list-group">
-          <li class="list-group-item">Porotos</li>
-          <li class="list-group-item">Lentejas</li>
-          <li class="list-group-item">Garbanzos</li>
-          <li class="list-group-item">Arvejas partidas</li>
-          <li class="list-group-item">Quinoa</li>
-          <li class="list-group-item">Arroz integral</li>
+<div class="modal-body">
+  <div class="accordion" id="accordionLegumbres">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lg-porotos">
+          Porotos
+        </button>
+      </h2>
+      <div id="lg-porotos" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Poroto negro</li>
+            <li>Poroto rojo</li>
+            <li>Poroto blanco</li>
+            <li>Poroto mung</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lg-lentejas">
+          Lentejas
+        </button>
+      </h2>
+      <div id="lg-lentejas" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Lenteja corriente</li>
+            <li>Lenteja roja</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lg-garbanzos">
+          Garbanzos
+        </button>
+      </h2>
+      <div id="lg-garbanzos" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Garbanzos calibre normal</li>
+            <li>Garbanzos grandes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lg-granos">
+          Granos y otros
+        </button>
+      </h2>
+      <div id="lg-granos" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Arvejas partidas</li>
+            <li>Quinoa blanca</li>
+            <li>Quinoa roja</li>
+            <li>Arroz integral</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
         </ul>
       </div>
     </div>
@@ -434,7 +718,7 @@
 </div>
 
 <!-- Yerba Mate -->
-<div class="modal fade" id="modalYerbaMate" tabindex="-1" aria-hidden="true">
+<div class="modal" id="modalYerbaMate" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-success text-white">
@@ -462,6 +746,10 @@
 </script>
 
 <!-- Tu script de búsqueda --> 
- <script> const searchInput = document.querySelector('header input'); searchInput.addEventListener('keyup', function() { let filter = searchInput.value.toLowerCase(); let cards = document.querySelectorAll('#productos .card'); cards.forEach(card => { let text = card.innerText.toLowerCase(); if (text.includes(filter)) { card.style.display = "block"; } else { card.style.display = "none"; } }); }); </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="Js/main.js" defer></script>
+
 </body>
 </html>
