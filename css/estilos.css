@@ -1,0 +1,314 @@
+:root {
+  --verde: #2e7d32;
+  --verde-claro: #7fdc8c;
+  --marron: #5d4037;
+  --fondo: #f9f7f3;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--fondo);
+  padding-top: 56px;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--verde);
+}
+
+header {
+  position: relative;
+  background: linear-gradient(135deg, var(--verde), var(--verde-claro));
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/frutos-secos.svg");
+  background-repeat: repeat;
+  background-position: 80% center; /* 80% = más a la derecha, 50% = centro */
+  background-size: 80%;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
+header img {
+  max-width: 200px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.25));
+}
+
+.navbar {
+  background-color: var(--verde);
+}
+
+.navbar a {
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.card {
+  border: none;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-pedido {
+  background-color: #25D366;
+  color: white;
+  font-size: 1.1rem;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--marron);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Alinear todas las cards en la misma altura */
+.row.g-4 > div {
+  display: flex;
+}
+
+.card {
+  flex: 1;
+}
+
+/* Clase para resaltar productos encontrados */
+.product-highlight {
+  background-color: #d1e7dd;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 6px 10px;
+  animation: resaltar 1s ease-in-out infinite alternate;
+  transition: background-color 0.3s;
+}
+
+@keyframes resaltar {
+  from { background-color: #d1e7dd; }
+  to { background-color: #a5d6a7; }
+}
+
+.buscador-container {
+  max-width: 420px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .buscador-container {
+    max-width: 90%;
+  }
+  .btn-pedido {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+  /* Ajustes para evitar que la silueta de fondo se vea pequeña o saturada en móviles */
+  header::before {
+    background-repeat: no-repeat;
+    background-position: 60% center;
+    background-size: 140%;
+    opacity: 0.06;
+  }
+  /* Reducir tamaño del logo en pantallas pequeñas para dar más espacio a la silueta */
+  header img {
+    max-width: 140px;
+  }
+}
+
+.mapa-iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 12px;
+  filter: grayscale(20%);
+}
+
+/* Evitar que la navbar fija tape los títulos al hacer clic en anclas */
+#productos, #sucursales, #contacto {
+  scroll-margin-top: 80px;
+}
+
+.modal-header .btn-close:focus {
+  outline: 2px solid white;
+  box-shadow: 0 0 0 0.25rem rgba(255,255,255,0.5);
+}
+
+/* ===== BUSCADOR CON SUGERENCIAS MEJORADO ===== */
+.buscador-container {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1020; /* Menor que el modal pero mayor que el header */
+}
+
+#sugerencias {
+  position: absolute;
+  top: 100%; /* Se posiciona justo debajo del input */
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-height: 250px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 1030; /* Por encima del header pero debajo del modal */
+  display: none;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  margin-top: 5px;
+}
+
+.sugerencia-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+  font-size: 14px;
+  color: #333;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f8f0; /* Verde muy claro */
+}
+
+.sugerencia-item strong {
+  background-color: #ffeb3b;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* ===== BUSCADOR CON SUGERENCIAS MEJORADO ===== */
+.buscador-container {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1020; /* Menor que el modal pero mayor que el header */
+}
+
+#sugerencias {
+  position: absolute;
+  top: 100%; /* Se posiciona justo debajo del input */
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-height: 250px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 1030; /* Por encima del header pero debajo del modal */
+  display: none;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  margin-top: 5px;
+}
+
+.sugerencia-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+  font-size: 14px;
+  color: #333;
+}
+
+.sugerencia-item:hover {
+  background-color: #f0f8f0; /* Verde muy claro */
+}
+
+.sugerencia-item strong {
+  background-color: #ffeb3b;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* ===== BOTÓN WHATSAPP FIJO PERO NO TAPA ===== */
+.btn-pedido {
+  background-color: #25D366;
+  color: white;
+  font-size: 1.1rem;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  margin-top: 20px !important; /* Forzar separación */
+  position: relative;
+  z-index: 1010; /* Por debajo de las sugerencias */
+}
+
+/* Ajuste para móvil */
+@media (max-width: 768px) {
+  .buscador-container {
+    max-width: 90%;
+  }
+  
+  #sugerencias {
+    max-height: 200px;
+    font-size: 13px;
+  }
+  
+  .sugerencia-item {
+    padding: 10px 12px;
+  }
+  
+  .btn-pedido {
+    font-size: 1rem;
+    padding: 12px 20px;
+    margin-top: 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #sugerencias {
+    max-height: 180px;
+  }
+  
+  .sugerencia-item {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
