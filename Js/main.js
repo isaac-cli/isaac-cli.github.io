@@ -207,4 +207,15 @@ function buscarProducto(texto) {
 
   }, 180); // tiempo suficiente para que el modal termine animación
   }
+
+});
+
+// ===============================
+// ACTIVAR BOTONES DE MAPAS
+// ===============================
+document.querySelectorAll(".map-toggle").forEach(button => {
+  button.addEventListener("click", function () {
+    const content = this.nextElementSibling;
+    content.classList.toggle("d-none");
+  });
 });
