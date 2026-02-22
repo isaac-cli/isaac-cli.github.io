@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header data-aos="fade-down">
+  <img src="img/logo.png" alt="Emperatriz Frutos Secos">
+  <h1>Emperatriz Frutos Secos</h1>
+  <p>Frutos secos, productos naturales y los mejores precios</p>
+
+<p class="mt-2 fw-semibold">
+  🕙 Lunes a viernes<br>
+  10:15 – 14:30 | 15:30 – 18:30
+</p>
+
+<div class="buscador-container mx-auto mt-3">
+  <input
+    type="text"
+    id="buscador"
+    class="form-control"
+    placeholder="Buscar producto...">
+</div>
+
+
+
+  <a href="https://wa.me/56934219681?text=Hola,%20quiero%20consultar%20por%20productos%20de%20Emperatriz%20Frutos%20Secos"
+     class="btn-pedido mt-4 d-inline-block">
+    🛒 Haz tu pedido por WhatsApp
+  </a>
+</header>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand text-white fw-bold" href="#">Emperatriz</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sucursales">Sucursales</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PRODUCTOS -->
+<section id="productos" class="container py-5">
+  <h2 class="text-center mb-5" data-aos="fade-right">🛍️ ¿Qué ofrecemos?</h2>
+  <p class="text-center mb-4">
+  Más de 300 productos disponibles.<br>
+  Atención personalizada y opción de compra a granel en sucursal Egaña 31.
+</p>
+
+  <div class="row g-4">
+    <!-- Frutos Secos -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalFrutosSecos">
+        <h3>🌰 Frutos Secos</h3>
+        <p>Gran variedad para lo que necesites.</p>
+      </div>
+    </div>
+
+    <!-- Tés e Infusiones -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalTes">
+        <h3>🍵 Tés e Infusiones</h3>
+        <p>Akbar, Basilur, Twinings, Landy.</p>
+      </div>
+    </div>
+
+    <!-- Cafés -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalCafe">
+        <h3>☕ Cafés</h3>
+        <p>En grano y molido.</p>
+      </div>
+    </div>
+
+    <!-- Aceites y Vinagres -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalAceites">
+        <h3>🧴 Aceites y Vinagres</h3>
+        <p>Opciones gourmet.</p>
+      </div>
+    </div>
+
+    <!-- Harinas -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalHarinas">
+        <h3>🌾 Harinas</h3>
+        <p>Con y sin gluten.</p>
+      </div>
+    </div>
+
+    <!-- Condimentos -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalCondimentos">
+        <h3>🧂 Condimentos</h3>
+        <p>Sales y especias.</p>
+      </div>
+    </div>
+
+    <!-- Semillas -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalSemillas">
+        <h3>🌱 Semillas</h3>
+        <p>Chía, linaza, zapallo.</p>
+      </div>
+    </div>
+
+    <!-- Legumbres -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalLegumbres">
+        <h3>🫘 Legumbres</h3>
+        <p>Porotos, lentejas, arroz.</p>
+      </div>
+    </div>
+
+    <!-- Yerba Mate -->
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card p-4 h-100" role="button" data-bs-toggle="modal" data-bs-target="#modalYerbaMate">
+        <h3>🍃 Yerba Mate</h3>
+        <p>Tradición y energía natural.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAPAS ================= -->
+<!-- ========== SUCURSALES CON MODALES PROFESIONALES ========== -->
+<section id="sucursales" class="container py-5">
+  <h2 class="text-center mb-5" data-aos="fade-right">
+    <span class="badge bg-success bg-opacity-25 text-dark p-3">📍 Nuestras Sucursales</span>
+  </h2>
+  
+  <div class="row g-4">
+    
+    <!-- SUCURSAL 1: Puerto Montt - Gallardo -->
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card h-100 border-0 shadow-lg hover-card">
+        <div class="card-header bg-success text-white py-3">
+          <h5 class="mb-0"><i class="bi bi-shop"></i> Puerto Montt - Gallardo</h5>
+        </div>
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+              <i class="bi bi-geo-alt-fill text-success fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Dirección</h6>
+              <p class="mb-0">Guillermo Gallardo 119</p>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+              <i class="bi bi-clock-fill text-success fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Horario</h6>
+              <p class="mb-0">Lun a Vie: 10:15–14:30 / 15:30–18:30</p>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+              <i class="bi bi-telephone-fill text-success fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Teléfono</h6>
+              <p class="mb-0">(65) 2 123 456</p>
+            </div>
+          </div>
+          
+          <!-- Botón que abre el modal -->
+          <button class="btn btn-outline-success w-100 mt-3 py-2" 
+                  data-bs-toggle="modal" 
+                  data-bs-target="#modalGallardo">
+            <i class="bi bi-map"></i> Ver mapa
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCURSAL 2: Puerto Montt - Egaña (Granel) -->
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card h-100 border-0 shadow-lg hover-card">
+        <div class="card-header bg-success text-white py-3">
+          <h5 class="mb-0"><i class="bi bi-shop"></i> Puerto Montt - Granel</h5>
+        </div>
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+              <i class="bi bi-geo-alt-fill text-success fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Dirección</h6>
+              <p class="mb-0">Egaña 31</p>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+              <i class="bi bi-clock-fill text-success fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Horario</h6>
+              <p class="mb-0">Lun a Vie: 10:15–14:30 / 15:30–18:30</p>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+              <i class="bi bi-telephone-fill text-success fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Teléfono</h6>
+              <p class="mb-0">(65) 2 654 321</p>
+            </div>
+          </div>
+          
+          <button class="btn btn-outline-success w-100 mt-3 py-2" 
+                  data-bs-toggle="modal" 
+                  data-bs-target="#modalEgana">
+            <i class="bi bi-map"></i> Ver mapa
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCURSAL 3: Puerto Varas -->
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="card h-100 border-0 shadow-lg hover-card">
+        <div class="card-header bg-success text-white py-3">
+          <h5 class="mb-0"><i class="bi bi-shop"></i> Puerto Varas</h5>
+        </div>
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+              <i class="bi bi-geo-alt-fill text-success fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Dirección</h6>
+              <p class="mb-0">Walker Martínez 525</p>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+              <i class="bi bi-clock-fill text-success fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Horario</h6>
+              <p class="mb-0">Lun a Vie: 10:15–14:30 / 15:30–18:30</p>
+            </div>
+          </div>
+          
+          <div class="d-flex align-items-center mb-3">
+            <div class="bg-success bg-opacity-10 p-3 rounded-circle me-3">
+              <i class="bi bi-telephone-fill text-success fs-4"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Teléfono</h6>
+              <p class="mb-0">(65) 2 987 654</p>
+            </div>
+          </div>
+          
+          <button class="btn btn-outline-success w-100 mt-3 py-2" 
+                  data-bs-toggle="modal" 
+                  data-bs-target="#modalVaras">
+            <i class="bi bi-map"></i> Ver mapa
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- row -->
+</section>
+
+<!-- ========== MODALES DE MAPAS ========== -->
+<!-- Modal 1: Gallardo -->
+<div class="modal fade" id="modalGallardo" tabindex="-1" aria-labelledby="modalGallardoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalGallardoLabel">
+          <i class="bi bi-geo-alt-fill me-2"></i>Puerto Montt - Guillermo Gallardo 119
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe
+          src="https://www.google.com/maps?q=Guillermo+Gallardo+119+Puerto+Montt&output=embed"
+          width="100%"
+          height="450"
+          style="border:0; display: block;"
+          allowfullscreen=""
+          loading="lazy"
+          title="Mapa sucursal Puerto Montt Gallardo">
+        </iframe>
+      </div>
+      <div class="modal-footer">
+        <small class="text-muted">📍 Guillermo Gallardo 119, Puerto Montt</small>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2: Egaña -->
+<div class="modal fade" id="modalEgana" tabindex="-1" aria-labelledby="modalEganaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalEganaLabel">
+          <i class="bi bi-geo-alt-fill me-2"></i>Puerto Montt - Egaña 31 (Granel)
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe
+          src="https://www.google.com/maps?q=Ega%C3%B1a+31+Puerto+Montt&output=embed"
+          width="100%"
+          height="450"
+          style="border:0; display: block;"
+          allowfullscreen=""
+          loading="lazy"
+          title="Mapa sucursal Puerto Montt Egaña">
+        </iframe>
+      </div>
+      <div class="modal-footer">
+        <small class="text-muted">📍 Egaña 31, Puerto Montt</small>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3: Puerto Varas -->
+<div class="modal fade" id="modalVaras" tabindex="-1" aria-labelledby="modalVarasLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalVarasLabel">
+          <i class="bi bi-geo-alt-fill me-2"></i>Puerto Varas - Walker Martínez 525
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe
+          src="https://www.google.com/maps?q=Walker+Mart%C3%ADnez+525+Puerto+Varas&output=embed"
+          width="100%"
+          height="450"
+          style="border:0; display: block;"
+          allowfullscreen=""
+          loading="lazy"
+          title="Mapa sucursal Puerto Varas">
+        </iframe>
+      </div>
+      <div class="modal-footer">
+        <small class="text-muted">📍 Walker Martínez 525, Puerto Varas</small>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- CONTACTO -->
+<!-- ========== CONTACTO PROFESIONAL ========== -->
+<section id="contacto" class="container py-5">
+  <h2 class="text-center mb-5" data-aos="fade-right">
+    <span class="badge bg-success bg-opacity-25 text-dark p-3">
+      <i class="bi bi-envelope-paper me-2"></i>¿Necesitas ayuda?
+    </span>
+  </h2>
+  
+  <div class="row justify-content-center">
+    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+      
+      <!-- Tarjeta del formulario -->
+      <div class="card border-0 shadow-lg">
+        <div class="card-body p-5">
+          
+          <!-- Encabezado decorativo -->
+          <div class="text-center mb-4">
+            <div class="bg-success bg-opacity-10 p-3 rounded-circle d-inline-block mb-3">
+              <i class="bi bi-chat-dots-fill text-success fs-1"></i>
+            </div>
+            <h3 class="fw-bold">Contáctanos</h3>
+            <p class="text-muted">Te responderemos a la brevedad</p>
+          </div>
+          
+          <!-- FORMULARIO CONEXIÓN FORMSPREE -->
+          <form action="https://formspree.io/f/mjgeanke" method="POST" id="contactForm">
+            
+            <!-- Campo oculto para asunto personalizado -->
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde Emperatriz Frutos Secos">
+            
+            <!-- Fila: Nombre y Email -->
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                  <label for="nombre"><i class="bi bi-person me-2"></i>Nombre completo</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                  <label for="email"><i class="bi bi-envelope me-2"></i>Correo electrónico</label>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Fila: Teléfono (opcional) -->
+            <div class="mb-3">
+              <div class="form-floating">
+                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+                <label for="telefono"><i class="bi bi-telephone me-2"></i>Teléfono (opcional)</label>
+              </div>
+            </div>
+            
+            <!-- Fila: Asunto -->
+            <div class="mb-3">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto del mensaje" required>
+                <label for="asunto"><i class="bi bi-tag me-2"></i>Asunto</label>
+              </div>
+            </div>
+            
+            <!-- Fila: Mensaje -->
+            <div class="mb-4">
+              <div class="form-floating">
+                <textarea class="form-control" id="mensaje" name="mensaje" style="height: 150px;" placeholder="Escribe tu mensaje..." required></textarea>
+                <label for="mensaje"><i class="bi bi-pencil me-2"></i>Mensaje</label>
+              </div>
+            </div>
+            
+            <!-- Botón de envío -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success btn-lg py-3" id="submitBtn">
+                <i class="bi bi-send me-2"></i>Enviar mensaje
+              </button>
+            </div>
+            
+            <!-- Mensaje de éxito (oculto inicialmente) -->
+            <div id="mensajeExito" class="alert alert-success mt-4 d-none" role="alert">
+              <i class="bi bi-check-circle-fill me-2"></i>
+              ¡Mensaje enviado con éxito! Te contactaremos pronto.
+            </div>
+            
+          </form>
+          
+          <!-- Información de contacto alternativa -->
+          <div class="row mt-5 pt-3 border-top">
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+              <div class="bg-success bg-opacity-10 p-2 rounded-circle d-inline-block mb-2">
+                <i class="bi bi-whatsapp text-success fs-4"></i>
+              </div>
+              <h6 class="fw-bold">WhatsApp</h6>
+              <a href="https://wa.me/56934219681" class="text-success text-decoration-none">+56 9 3421 9681</a>
+            </div>
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+              <div class="bg-success bg-opacity-10 p-2 rounded-circle d-inline-block mb-2">
+                <i class="bi bi-envelope text-success fs-4"></i>
+              </div>
+              <h6 class="fw-bold">Email</h6>
+              <a href="mailto:contacto@emperatriz.cl" class="text-success text-decoration-none">contacto@emperatriz.cl</a>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="bg-success bg-opacity-10 p-2 rounded-circle d-inline-block mb-2">
+                <i class="bi bi-clock text-success fs-4"></i>
+              </div>
+              <h6 class="fw-bold">Horario</h6>
+              <p class="mb-0 small">Lun a Vie: 10:15–18:30</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Emperatriz Frutos Secos</p>
+  <p>
+    Atención de lunes a viernes<br>
+    10:15 – 14:30 | 15:30 – 18:30
+  </p>
+  <div>
+    <a href="https://wa.me/56934219681">WhatsApp</a>
+    <a href="mailto:contacto@emperatriz.cl">Email</a>
+  </div>
+</footer>
+
+<!-- MODALES -->
+<!-- MODAL FRUTOS SECOS + FRUTAS DESHIDRATADAS -->
+<div class="modal" id="modalFrutosSecos" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🌰 Frutos Secos y Deshidratados</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="accordion" id="accordionFrutosSecos">
+
+          <!-- ===== NUECES ===== -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#fs-nueces">
+                Nueces
+              </button>
+            </h2>
+            <div id="fs-nueces" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Mariposa blanca</li>
+                  <li>Mariposa ámbar</li>
+                  <li>Mariposa oscura</li>
+                  <li>Picada cuartillo blanca</li>
+                  <li>Picada cuartillo ámbar</li>
+                  <li>Picada oscura</li>
+                  <li>Cuartos blancos</li>
+                  <li>Cuartos ámbar</li>
+                  <li>En cáscara</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== ALMENDRAS ===== -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#fs-almendras">
+                Almendras
+              </button>
+            </h2>
+            <div id="fs-almendras" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Exportación</li>
+                  <li>Partidas / trituradas</li>
+                  <li>Laminadas</li>
+                  <li>Entera / con daño</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== MANÍ ===== -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#fs-mani">
+                Maní
+              </button>
+            </h2>
+            <div id="fs-mani" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Tostado con o sin sal</li>
+                  <li>Cutícula roja tostado</li>
+                  <li>Con cáscara premium</li>
+                  <li>Confitado (natural, rojo, mix, capuchino, sésamo)</li>
+                  <li>Saborizado (frambuesa, menta, mora, mix)</li>
+                  <li>Chocolate cacao bitter premium</li>
+                  <li>Chocolate leche premium</li>
+                  <li>Chocolate golosina</li>
+                  <li>Merkén picante</li>
+                  <li>Orégano / finas hierbas</li>
+                  <li>Japonés (clásico, picante, ciboulette, napolitano)</li>
+                  <li>Japonés mix 4 sabores</li>
+                  <li>Japonés sésamo</li>
+                  <li>Crocomaní / rocklets</li>
+                  <li>En terrones</li>
+                  <li>Garrapiñado</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== OTROS FRUTOS SECOS ===== -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#fs-otros">
+                Otros frutos secos
+              </button>
+            </h2>
+            <div id="fs-otros" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Avellanas europeas</li>
+                  <li>Castaña de cajú (salada o natural)</li>
+                  <li>Pistacho (salado o natural)</li>
+                  <li>Pistacho sin cáscara</li>
+                  <li>Nuez macadamia</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== 🍏 FRUTAS DESHIDRATADAS ===== -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#fs-frutas">
+                🍏 Frutas Deshidratadas
+              </button>
+            </h2>
+            <div id="fs-frutas" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Manzana deshidratada</li>
+                  <li>Plátano deshidratado</li>
+                  <li>Piña deshidratada</li>
+                  <li>Mango deshidratado</li>
+                  <li>Arándanos deshidratados</li>
+                  <li>Coco rallado / laminado</li>
+                  <li>Orejones de manzana</li>
+                  <li>Pasas rubias</li>
+                  <li>Pasas negras</li>
+                  <li>Dátiles</li>
+                  <li>Higos secos</li>
+                  <li>Ciruelas secas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- Cierra accordion -->
+      </div> <!-- Cierra modal-body -->
+    </div> <!-- Cierra modal-content -->
+  </div> <!-- Cierra modal-dialog -->
+</div> <!-- Cierra modal -->
+
+<!-- Tés e Infusiones - VERSIÓN MEJORADA CON ACORDEÓN -->
+<div class="modal" id="modalTes" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🍵 Tés e Infusiones</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="accordion" id="accordionTes">
+
+          <!-- AKBAR -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tes-akbar">
+                Akbar
+              </button>
+            </h2>
+            <div id="tes-akbar" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Earl Grey</li>
+                  <li>English Breakfast</li>
+                  <li>Darjeeling</li>
+                  <li>Té Verde</li>
+                  <li>Jazmín</li>
+                  <li>Mango y Maracuyá</li>
+                  <li>Frutos Rojos</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- BASILUR -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tes-basilur">
+                Basilur
+              </button>
+            </h2>
+            <div id="tes-basilur" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>White Symphony</li>
+                  <li>Golden Ceylon</li>
+                  <li>Oriental Princess</li>
+                  <li>Fruit Temptation</li>
+                  <li>Magic Masala</li>
+                  <li>Chai Latte</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TWININGS -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tes-twinings">
+                Twinings
+              </button>
+            </h2>
+            <div id="tes-twinings" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>English Breakfast</li>
+                  <li>Earl Grey</li>
+                  <li>Lady Grey</li>
+                  <li>Té Verde con Menta</li>
+                  <li>Manzanilla</li>
+                  <li>Pu-erh</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- LANDY -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tes-landy">
+                Landy
+              </button>
+            </h2>
+            <div id="tes-landy" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Té Negro</li>
+                  <li>Té Verde</li>
+                  <li>Té Rojo</li>
+                  <li>Manzanilla</li>
+                  <li>Menta</li>
+                  <li>Frutos del Bosque</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- INFUSIONES (sin teína) -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tes-infusiones">
+                Infusiones
+              </button>
+            </h2>
+            <div id="tes-infusiones" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Manzanilla</li>
+                  <li>Menta</li>
+                  <li>Rooibos</li>
+                  <li>Hibisco</li>
+                  <li>Jengibre con Limón</li>
+                  <li>Tilo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- cierra accordion -->
+      </div> <!-- cierra modal-body -->
+    </div>
+  </div>
+</div>
+
+<!-- Cafés - VERSIÓN MEJORADA CON ACORDEÓN -->
+<div class="modal" id="modalCafe" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">☕ Cafés</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="accordion" id="accordionCafe">
+
+          <!-- POR TIPO DE GRANO -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cafe-grano">
+                Café en grano
+              </button>
+            </h2>
+            <div id="cafe-grano" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Jardin</li>
+                  <li>piazza cafes</li>
+                  <li>fincas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- CAFÉ MOLIDO -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cafe-molido">
+                Café molido
+              </button>
+            </h2>
+            <div id="cafe-molido" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Fincas</li>
+                  <li>Copacabana</li>
+                  <li>Jardin</li>
+                  <li>Llanquihue</li>
+                  <li>Lavazza</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- CAFÉ DESCAFEINADO -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cafe-descafeinado">
+                Café descafeinado
+              </button>
+            </h2>
+            <div id="cafe-descafeinado" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Descafeinado grano</li>
+                  <li>Descafeinado molido</li>
+                  <li>Descafeinado instantaneo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div> <!-- cierra accordion -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Aceites y Vinagres -->
+<div class="modal" id="modalAceites" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🧴 Aceites y Vinagres</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">Aceite de oliva</li>
+          <li class="list-group-item">Aceite de coco</li>
+          <li class="list-group-item">Vinagre balsámico</li>
+          <li class="list-group-item">Vinagre de manzana</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Harinas -->
+<div class="modal" id="modalHarinas" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🌾 Harinas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="accordion" id="accordionHarinas">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#hc-harinas">
+                Harinas
+              </button>
+            </h2>
+            <div id="hc-harinas" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Avena</li>
+                  <li>Almendra</li>
+                  <li>Arroz</li>
+                  <li>Coco</li>
+                  <li>Garbanzo</li>
+                  <li>Quinoa</li>
+                  <li>Maíz</li>
+                  <li>Sin gluten</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#hc-cereales">
+                Cereales
+              </button>
+            </h2>
+            <div id="hc-cereales" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Avena integral</li>
+                  <li>Granola</li>
+                  <li>Muesli</li>
+                  <li>Cornflake</li>
+                  <li>Salvado</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Condimentos -->
+<div class="modal" id="modalCondimentos" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🧂 Condimentos</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="accordion" id="accordionCondimentos">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#cd-sal">
+                Sal
+              </button>
+            </h2>
+            <div id="cd-sal" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Sal fina</li>
+                  <li>Sal gruesa</li>
+                  <li>Sal rosada</li>
+                  <li>Sal parrillera</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#cd-pimienta">
+                Pimienta
+              </button>
+            </h2>
+            <div id="cd-pimienta" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Negra grano</li>
+                  <li>Negra molida</li>
+                  <li>Blanca</li>
+                  <li>Mix pimientas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#cd-especias">
+                Especias
+              </button>
+            </h2>
+            <div id="cd-especias" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Orégano</li>
+                  <li>Comino</li>
+                  <li>Paprika</li>
+                  <li>Curry</li>
+                  <li>Merkén</li>
+                  <li>Ajo en polvo</li>
+                  <li>Cebolla en polvo</li>
+                  <li>Nuez moscada</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#cd-mix">
+                Mix y condimentos preparados
+              </button>
+            </h2>
+            <div id="cd-mix" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Finas hierbas</li>
+                  <li>Aliño completo</li>
+                  <li>Mix parrillero</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Semillas -->
+<div class="modal" id="modalSemillas" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🌱 Semillas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="accordion" id="accordionSemillas">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sm-semillas">
+                Semillas
+              </button>
+            </h2>
+            <div id="sm-semillas" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Chía negra</li>
+                  <li>Chía blanca</li>
+                  <li>Linaza</li>
+                  <li>Girasol</li>
+                  <li>Zapallo</li>
+                  <li>Sésamo blanco</li>
+                  <li>Sésamo negro</li>
+                  <li>Sésamo tostado</li>
+                  <li>Amapola</li>
+                  <li>Mix semillas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Legumbres -->
+<div class="modal" id="modalLegumbres" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🫘 Legumbres</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="accordion" id="accordionLegumbres">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lg-porotos">
+                Porotos
+              </button>
+            </h2>
+            <div id="lg-porotos" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Poroto negro</li>
+                  <li>Poroto rojo</li>
+                  <li>Poroto blanco</li>
+                  <li>Poroto mung</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lg-lentejas">
+                Lentejas
+              </button>
+            </h2>
+            <div id="lg-lentejas" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Lenteja corriente</li>
+                  <li>Lenteja roja</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lg-garbanzos">
+                Garbanzos
+              </button>
+            </h2>
+            <div id="lg-garbanzos" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Garbanzos calibre normal</li>
+                  <li>Garbanzos grandes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lg-granos">
+                Granos y otros
+              </button>
+            </h2>
+            <div id="lg-granos" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Arvejas partidas</li>
+                  <li>Quinoa blanca</li>
+                  <li>Quinoa roja</li>
+                  <li>Arroz integral</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Yerba Mate - VERSIÓN MEJORADA CON ACORDEÓN -->
+<div class="modal" id="modalYerbaMate" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">🍃 Yerba Mate</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="accordion" id="accordionYerba">
+
+          <!-- TARAGÜI -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yerba-taragui">
+                Taragüi
+              </button>
+            </h2>
+            <div id="yerba-taragui" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Taragüi Tradicional</li>
+                  <li>Taragüi Suave</li>
+                  <li>Taragüi Despalada</li>
+                  <li>Taragüi Menta y Limón</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- CBSÈ -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yerba-cbse">
+                CBSè
+              </button>
+            </h2>
+            <div id="yerba-cbse" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>CBSè Tradicional</li>
+                  <li>CBSè Suave</li>
+                  <li>CBSè Con Palo</li>
+                  <li>CBSè Sin Palo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- CRUZ DE MALTA -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yerba-cruz">
+                Cruz de Malta
+              </button>
+            </h2>
+            <div id="yerba-cruz" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Cruz de Malta Clásica</li>
+                  <li>Cruz de Malta Suave</li>
+                  <li>Cruz de Malta Despalada</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- PLAYADITO -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yerba-playadito">
+                Playadito
+              </button>
+            </h2>
+            <div id="yerba-playadito" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Playadito Tradicional</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROSAMONTE -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yerba-rosamonte">
+                Rosamonte
+              </button>
+            </h2>
+            <div id="yerba-rosamonte" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li>Rosamonte Tradicional</li>
+                  <li>Rosamonte Suave</li>
+                  <li>Rosamonte Despalada</li>
+                  <li>Rosamonte Especial</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div> <!-- cierra accordion -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true });
+</script>
+<script src="js/main.js" defer></script>
+
+</body>
+</html>
